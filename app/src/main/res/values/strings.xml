@@ -74,4 +74,10 @@
 
     <string name="bioma_pantanal">Pantanal</string>
     <string name="desc_pantanal">A maior planície alagável do mundo, vulnerável a queimadas e à alteração do regime de chuvas.</string>
+
+    <string name="galeria_do_bioma">Galeria — %1$s</string>
+    <string name="ouvir_som_do_bioma">Ouvir som do bioma</string>
+    <string name="escolha_um_bioma">Escolha um bioma</string>
+    <string name="explicacao_biomas_subtitulo">Explore os biomas brasileiros e veja como a crise climática afeta cada um deles.</string>
+    <string name="atualizacoes_do_bioma">Atualizações do bioma selecionado</string>
 </resources>
