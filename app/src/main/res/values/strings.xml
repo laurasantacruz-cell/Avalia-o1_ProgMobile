@@ -55,4 +55,29 @@
         <item>Pampa</item>
         <item>Pantanal</item>
     </string-array>
+    <string name="desc_imagem_bioma">Imagem representativa do bioma</string>
+
+    <string name="bioma_amazonia">Amazônia</string>
+    <string name="desc_amazonia">A maior floresta tropical do planeta, essencial na regulação do clima global e ameaçada pelo avanço do desmatamento.</string>
+
+    <string name="bioma_caatinga">Caatinga</string>
+    <string name="desc_caatinga">Bioma semiárido exclusivamente brasileiro, com espécies adaptadas à seca e alta sensibilidade ao aquecimento global.</string>
+
+    <string name="bioma_cerrado">Cerrado</string>
+    <string name="desc_cerrado">Savana tropical com grande biodiversidade, responsável por abastecer importantes bacias hidrográficas do país.</string>
+
+    <string name="bioma_mata_atlantica">Mata Atlântica</string>
+    <string name="desc_mata_atlantica">Um dos biomas mais devastados do Brasil, hoje reduzido a poucos fragmentos de vegetação original.</string>
+
+    <string name="bioma_pampa">Pampa</string>
+    <string name="desc_pampa">Bioma de planícies e campos ao sul do país, marcado pela pecuária extensiva e por invernos rigorosos.</string>
+
+    <string name="bioma_pantanal">Pantanal</string>
+    <string name="desc_pantanal">A maior planície alagável do mundo, vulnerável a queimadas e à alteração do regime de chuvas.</string>
+
+    <string name="galeria_do_bioma">Galeria — %1$s</string>
+    <string name="ouvir_som_do_bioma">Ouvir som do bioma</string>
+    <string name="escolha_um_bioma">Escolha um bioma</string>
+    <string name="explicacao_biomas_subtitulo">Explore os biomas brasileiros e veja como a crise climática afeta cada um deles.</string>
+    <string name="atualizacoes_do_bioma">Atualizações do bioma selecionado</string>
 </resources>
