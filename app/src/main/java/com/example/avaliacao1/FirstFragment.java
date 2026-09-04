@@ -41,10 +41,18 @@ public class FirstFragment extends Fragment {
         listaBiomas = montarListaBiomas();
 
         // Spinner
+        String[] nomes = new String[listaBiomas.size() + 1];
+
+        nomes[0] = "Selecione";
+
+        for (int i = 0; i < listaBiomas.size(); i++) {
+            nomes[i + 1] = listaBiomas.get(i).getNome();
+        }
+
         ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<>(
                 requireContext(),
                 android.R.layout.simple_spinner_item,
-                nomesDosBiomas(listaBiomas)
+                nomes
         );
         spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         binding.spinnerBiomas.setAdapter(spinnerAdapter);
@@ -57,7 +65,11 @@ public class FirstFragment extends Fragment {
         binding.spinnerBiomas.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                biomaViewModel.selecionarBioma(listaBiomas.get(position));
+                if (position == 0) {
+                    biomaViewModel.selecionarBioma(null);
+                } else {
+                    biomaViewModel.selecionarBioma(listaBiomas.get(position - 1));
+                }
             }
 
             @Override
