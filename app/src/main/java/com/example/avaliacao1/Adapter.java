@@ -1,28 +1,33 @@
 package com.example.avaliacao1;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.TextView;
+
+import java.util.List;
 
 public class Adapter extends BaseAdapter {
-    private Context context;
-    private int[] lista;
 
-    public Adapter(Context context, int[] lista) {
+    private final Context context;
+    private final List<Bioma> listaBiomas;
+
+    public Adapter(Context context, List<Bioma> listaBiomas) {
         this.context = context;
-        this.lista = lista;
+        this.listaBiomas = listaBiomas;
     }
 
     @Override
     public int getCount() {
-        return lista.length;
+        return listaBiomas.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return lista[position];
+        return listaBiomas.get(position);
     }
 
     @Override
@@ -31,11 +36,38 @@ public class Adapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        ImageView iv = new ImageView(context);
-        iv.setImageResource(lista[position]);
-        iv.setLayoutParams(new ViewGroup.LayoutParams(250,250));
-        iv.setPadding(5,5,5,5);
-        return iv;
+    public View getView(
+            int position,
+            View convertView,
+            ViewGroup parent
+    ) {
+
+        if (convertView == null) {
+
+            convertView = LayoutInflater.from(context)
+                    .inflate(
+                            R.layout.item_grid_bioma,
+                            parent,
+                            false
+                    );
+        }
+
+        ImageView imgBioma =
+                convertView.findViewById(R.id.imgBioma);
+
+        TextView txtNomeBioma =
+                convertView.findViewById(R.id.txtNomeBioma);
+
+        Bioma bioma = listaBiomas.get(position);
+
+        imgBioma.setImageResource(
+                bioma.getImagemPrincipal()
+        );
+
+        txtNomeBioma.setText(
+                bioma.getNome()
+        );
+
+        return convertView;
     }
 }
