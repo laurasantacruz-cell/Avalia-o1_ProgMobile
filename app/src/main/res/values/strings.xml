@@ -7,6 +7,11 @@
     <string name="third_fragment_label">Third Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+    <string name="titulo_dialogo_tema">Escolha o tema</string>
+    <string name="tema_claro">Modo Claro</string>
+    <string name="tema_escuro">Modo Noturno</string>
+    <string name="tema_sistema">Padrão do sistema</string>
+
 
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
