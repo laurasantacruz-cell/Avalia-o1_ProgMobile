@@ -89,24 +89,35 @@ public class FirstFragment extends Fragment {
             intent.putExtra(DetalheActivity.EXTRA_TITULO, bioma.getNome());
             intent.putExtra(DetalheActivity.EXTRA_DESCRICAO, bioma.getDescricao());
             intent.putExtra(DetalheActivity.EXTRA_IMAGEM, bioma.getImagemPrincipal());
+            intent.putExtra(DetalheActivity.EXTRA_SOM, bioma.getSom());
             startActivity(intent);
         });
     }
 
     private List<Bioma> montarListaBiomas() {
         List<Bioma> lista = new ArrayList<>();
+
         lista.add(new Bioma(getString(R.string.bioma_amazonia), getString(R.string.desc_amazonia),
-                R.drawable.amazonia_img1, R.drawable.amazonia_img2));
+                R.drawable.amazonia_img1, R.drawable.amazonia_img2,
+                R.raw.som_amazonia));
+
         lista.add(new Bioma(getString(R.string.bioma_caatinga), getString(R.string.desc_caatinga),
-                R.drawable.caatinga_img1, R.drawable.caatinga_img2));
+                R.drawable.caatinga_img1, R.drawable.caatinga_img2, R.raw.som_caatinga));
+
         lista.add(new Bioma(getString(R.string.bioma_cerrado), getString(R.string.desc_cerrado),
-                R.drawable.cerrado_img1, R.drawable.cerrado_img2));
+                R.drawable.cerrado_img1, R.drawable.cerrado_img2,
+                R.raw.som_cerrado));
+
         lista.add(new Bioma(getString(R.string.bioma_mata_atlantica), getString(R.string.desc_mata_atlantica),
-                R.drawable.mata_atlantica_img1, R.drawable.mata_atlantica_img2));
+                R.drawable.mata_atlantica_img1, R.drawable.mata_atlantica_img2,
+                R.raw.som_mata_atlantica));
+
         lista.add(new Bioma(getString(R.string.bioma_pampa), getString(R.string.desc_pampa),
-                R.drawable.pampa_img1, R.drawable.pampa_img2));
+                R.drawable.pampa_img1, R.drawable.pampa_img2, R.raw.som_pampa));
+
         lista.add(new Bioma(getString(R.string.bioma_pantanal), getString(R.string.desc_pantanal),
-                R.drawable.pantanal_img1, R.drawable.pantanal_img2));
+                R.drawable.pantanal_img1, R.drawable.pantanal_img2, R.raw.som_pantanal));
+
         return lista;
     }
 
@@ -123,4 +134,6 @@ public class FirstFragment extends Fragment {
         super.onDestroyView();
         binding = null;
     }
+
+
 }
